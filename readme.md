@@ -3,7 +3,7 @@
 > **Objetivo**  
 > Criar um protótipo de RBC que receba um novo paciente, compare-o a uma base de pelo menos 50 casos históricos e mostre os casos mais parecidos, permitindo que o usuário ajuste a importância (peso) de cada atributo.
 
-Projeto publicado via **GitHub Pages**: basta abrir `index.html` diretamente no repositório (não é necessário instalar nada).
+Projeto publicado via **GitHub Pages**.
 
 ---
 
