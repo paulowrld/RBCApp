@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RBC</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Protótipo de RBC | Risco de Diabetes</h1>
+    </header>
+
+    <section class="section" id="input-section">
+        <h2>1. Inserir Dados do Novo Paciente</h2>
+        <form id="caseForm">
+            <div class="grid-2">
+
+                <fieldset>
+                    <legend>Valores dos Atributos</legend>
+
+                    <label>Idade (anos)
+                        <input type="number" id="input-Age" required value="45" />
+                    </label>
+
+                    <label>Sexo
+                        <select id="input-Sex" required>
+                            <option value="">Selecione…</option>
+                            <option value="Male" selected>Masculino</option>
+                            <option value="Female">Feminino</option>
+                        </select>
+                    </label>
+
+                    <label>Etnia
+                        <select id="input-Ethnicity">
+                            <option value="">Selecione…</option>
+                            <option value="White" selected>Branca</option>
+                            <option value="Asian">Asiática</option>
+                            <option value="Black">Negra</option>
+                            <option value="Hispanic">Hispânica</option>
+                            <option value="Other">Outra</option>
+                        </select>
+                    </label>
+
+                    <label>BMI
+                        <input type="number" id="input-BMI" step="0.1" value="28.5" />
+                    </label>
+
+                    <label>Circunferência da Cintura (cm)
+                        <input type="number" id="input-WaistCircumference" value="95" />
+                    </label>
+
+                    <label>Glicemia de Jejum (mg/dL)
+                        <input type="number" id="input-FastingBloodGlucose" step="0.1" value="110" />
+                    </label>
+
+                    <label>HbA1c (%)
+                        <input type="number" id="input-HbA1c" step="0.1" value="5.8" />
+                    </label>
+
+                    <label>Pressão Sistólica (mmHg)
+                        <input type="number" id="input-BloodPressureSystolic" value="130" />
+                    </label>
+
+                    <label>Pressão Diastólica (mmHg)
+                        <input type="number" id="input-BloodPressureDiastolic" value="85" />
+                    </label>
+
+                    <label>Colesterol Total (mg/dL)
+                        <input type="number" id="input-CholesterolTotal" value="210" />
+                    </label>
+
+                    <label>Colesterol HDL (mg/dL)
+                        <input type="number" id="input-CholesterolHDL" value="45" />
+                    </label>
+
+                    <label>Colesterol LDL (mg/dL)
+                        <input type="number" id="input-CholesterolLDL" value="140" />
+                    </label>
+
+                    <label>GGT (U/L)
+                        <input type="number" id="input-GGT" value="30" />
+                    </label>
+
+                    <label>Ácido Úrico (mg/dL)
+                        <input type="number" id="input-SerumUrate" step="0.1" value="5.5" />
+                    </label>
+
+                    <label>Nivel de Atividade Fisica
+                        <select id="input-PhysicalActivityLevel">
+                            <option value="">Selecione…</option>
+                            <option value="Low">Baixo</option>
+                            <option value="Moderate" selected>Moderado</option>
+                            <option value="High">Alto</option>
+                        </select>
+                    </label>
+
+                    <label>Consumo Diario de Calorias (kcal)
+                        <input type="number" id="input-DietaryIntakeCalories" value="2200" />
+                    </label>
+
+                    <label>Álcool
+                        <select id="input-AlcoholConsumption">
+                            <option value="">Selecione…</option>
+                            <option value="None">Nenhum</option>
+                            <option value="Moderate" selected>Moderado</option>
+                            <option value="Heavy">Excessivo</option>
+                        </select>
+                    </label>
+
+                    <label>Tabagismo
+                        <select id="input-SmokingStatus">
+                            <option value="">Selecione…</option>
+                            <option value="Never">Nunca</option>
+                            <option value="Former" selected>Ex‑fumante</option>
+                            <option value="Current">Atual</option>
+                        </select>
+                    </label>
+
+                    <label>Histórico Familiar de Diabetes
+                        <select id="input-FamilyHistoryDiabetes">
+                            <option value="0">Não</option>
+                            <option value="1" selected>Sim</option>
+                        </select>
+                    </label>
+
+                    <label>diabetes Gestacional Anterior
+                        <select id="input-PreviousGestationalDiabetes">
+                            <option value="0" selected>Não</option>
+                            <option value="1">Sim</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Pesos dos Atributos (0 à 1)</legend>
+                    <p class="hint">Ajuste a importância relativa de cada atributo.
+                        <br />
+                        Os valores padrão vêm da modelagem.
+                    </p>
+
+                    <label>Idade
+                        <input type="number" id="weight-Age" min="0" max="1" step="0.01" value="0.07" />
+                    </label>
+                    <label>Sexo
+                        <input type="number" id="weight-Sex" min="0" max="1" step="0.01" value="0.03" />
+                    </label>
+                    <label>Etnia
+                        <input type="number" id="weight-Ethnicity" min="0" max="1" step="0.01" value="0.05" />
+                    </label>
+                    <label>BMI
+                        <input type="number" id="weight-BMI" min="0" max="1" step="0.01" value="0.08" />
+                    </label>
+                    <label>Circunferência Cintura
+                        <input type="number" id="weight-WaistCircumference" min="0" max="1" step="0.01" value="0.08" />
+                    </label>
+                    <label>Glicemia Jejum
+                        <input type="number" id="weight-FastingBloodGlucose" min="0" max="1" step="0.01" value="0.1" />
+                    </label>
+                    <label>HbA1c
+                        <input type="number" id="weight-HbA1c" min="0" max="1" step="0.01" value="0.1" />
+                    </label>
+                    <label>Pressão Sistólica
+                        <input type="number" id="weight-BloodPressureSystolic" min="0" max="1" step="0.01" value="0.05" />
+                    </label>
+                    <label>Pressão Diastólica
+                        <input type="number" id="weight-BloodPressureDiastolic" min="0" max="1" step="0.01" value="0.05" />
+                    </label>
+                    <label>Colesterol Total
+                        <input type="number" id="weight-CholesterolTotal" min="0" max="1" step="0.01" value="0.04" />
+                    </label>
+                    <label>Colesterol HDL
+                        <input type="number" id="weight-CholesterolHDL" min="0" max="1" step="0.01" value="0.04" />
+                    </label>
+                    <label>Colesterol LDL
+                        <input type="number" id="weight-CholesterolLDL" min="0" max="1" step="0.01" value="0.04" />
+                    </label>
+                    <label>GGT
+                        <input type="number" id="weight-GGT" min="0" max="1" step="0.01" value="0.03" />
+                    </label>
+                    <label>Ácido Úrico
+                        <input type="number" id="weight-SerumUrate" min="0" max="1" step="0.01" value="0.03" />
+                    </label>
+                    <label>Atividade Física
+                        <input type="number" id="weight-PhysicalActivityLevel" min="0" max="1" step="0.01" value="0.04" />
+                    </label>
+                    <label>Calorias Diárias
+                        <input type="number" id="weight-DietaryIntakeCalories" min="0" max="1" step="0.01" value="0.04" />
+                    </label>
+                    <label>Álcool
+                        <input type="number" id="weight-AlcoholConsumption" min="0" max="1" step="0.01" value="0.03" />
+                    </label>
+                    <label>Tabagismo
+                        <input type="number" id="weight-SmokingStatus" min="0" max="1" step="0.01" value="0.03" />
+                    </label>
+                    <label>Hist. Familiar
+                        <input type="number" id="weight-FamilyHistoryDiabetes" min="0" max="1" step="0.01" value="0.05" />
+                    </label>
+                    <label>Diab. Gestacionl
+                        <input type="number" id="weight-PreviousGestationalDiabetes" min="0" max="1" step="0.01" value="0.05" />
+                    </label>
+                </fieldset>
+            </div>
+        </form>
+        <button id="btnRun" class="btn-primary">Calcular Similaridade</button>
+    </section>
+
+    <section class="section" id="results-section">
+        <h2>2. Resultados</h2>
+        <div id="results"></div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
